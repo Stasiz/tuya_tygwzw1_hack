@@ -93,8 +93,8 @@ UART data in both directions. There is simple buffering mechanism to avoid sendi
 
 We will be using original Realtek SDK for Ameba with my modifications:  
 **Install all required files for i386 running i386 programs.** We ill use built in ARM GCC toolchain/compiler.  
-Clone [https://github.com/parasite85/rtl_firmware](https://github.com/parasite85/rtl_firmware) repo  
-Next go to dir: `rtl_firmware# cd project/realtek_ameba1_va0_example/GCC-RELEASE/`  
+Clone [https://github.com/parasite85/rtl_firmware](https://github.com/parasite85/rtl_firmware) repo: `git clone https://github.com/parasite85/rtl_firmware`
+Next go to dir: `cd rtl_firmware/project/realtek_ameba1_va0_example/GCC-RELEASE/`  
 Change debugger to openocd: `export GDB_SERVER=openocd && make setup`  
 Compile the project: `make`  
   
@@ -102,7 +102,7 @@ Compile the project: `make`
   
 Open terminal and go to dir `rtl_firmware# cd project/realtek_ameba1_va0_example/GCC-RELEASE/`  
 Next, run script `run_openocd.sh`. It will create debug server for GDB.
-Open second terminal and go to dir: `rtl_firmware# cd project/realtek_ameba1_va0_example/GCC-RELEASE/`  
+Open second terminal and go to dir: `cd rtl_firmware/project/realtek_ameba1_va0_example/GCC-RELEASE/`  
 In second terminal run: `make flash`. This will load simple binary to realtek SRAM (no full source) and perform flash.  
   
 Once it finish. We can attach our USB UART to LOG-UART - See pink color on my image.
